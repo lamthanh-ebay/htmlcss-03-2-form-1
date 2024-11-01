@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="vi">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Form UI 01</title>
+        <!-- font-awesome -->
+        <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+            integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <!-- Font Google -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&family=Merriweather:wght@700&display=swap"
+            rel="stylesheet"
+        />
+        <!-- Reset CSS -->
+        <link rel="stylesheet" href="./assets/css/reset.css" />
+        <!-- Style CSS -->
+        <link rel="stylesheet" href="./assets/css/style.css" />
+    </head>
+    <body>
+        <!-- Header -->
+        <header class="header"></header>
+
+        <!-- Main content -->
+        <main class="main-content">
+            <!-- Form Register -->
+            <section class="form-register">
+                <div class="container-form">
+                    <!-- Form Left -->
+                    <div class="form-left">
+                        <div class="form-left__content">
+                            <!-- Form header -->
+                            <div class="form__header">
+                                <span class="form__date">March 17, 2021 12:00</span>
+                                <h1 class="form_heading">The help of Augmented Reality and Holograms.</h1>
+                                <p class="form__desc">
+                                    Use Augmented Reality to keep students engaged and provide detailed explanations of
+                                    models and course material. In a 3D, AR Lab, students can pinch, zoom, and rotate
+                                    equipment related to the course, for a fully immersive learning experience
+                                </p>
+                            </div>
+
+                            <!-- Form -->
+                            <form action="./from-ui-01.php" method="post" class="form-content" autocomplete="off">
+                                <label for="" class="form-content__label">Join the event</label>
+
+                                <div class="form-row">
+                                    <div class="form-ground">
+                                        <label for="first-name" class="form-label">First name</label>
+                                        <input
+                                            type="text"
+                                            name="first-name"
+                                            id="first-name"
+                                            class="form-input"
+                                            placeholder="Enter your first name"
+                                            required
+                                            minlength="2"
+                                            value=""
+                                        />
+                                        <p class="form-error">Nhập nội dung, tối thiểu 2 ký tự</p>
+                                    </div>
+
+                                    <div class="form-ground">
+                                        <label for="last-name" class="form-label">Last name</label>
+                                        <input
+                                            type="text"
+                                            name="last-name"
+                                            id="last-name"
+                                            class="form-input"
+                                            placeholder="Enter your last name"
+                                            required
+                                            minlength="2"
+                                            value=""
+                                        />
+                                        <p class="form-error">Nhập nội dung, tối thiểu 2 ký tự</p>
+                                    </div>
+                                </div>
+
+                                <div class="form-row">
+                                    <div class="form-ground">
+                                        <label for="business-email" class="form-label">Business email</label>
+                                        <input
+                                            type="email"
+                                            name="business-email"
+                                            id="business-email"
+                                            class="form-input"
+                                            placeholder="Enter your email"
+                                            required
+                                            pattern="[^@\s]+@[^@\s]+\.[^@\s]+"
+                                            value=""
+                                        />
+                                        <p class="form-error">Nhập đúng định dạng Email</p>
+                                    </div>
+
+                                    <div class="form-ground">
+                                        <label for="phone" class="form-label">Phone</label>
+                                        <input
+                                            type="tel"
+                                            name="phone"
+                                            id="phone"
+                                            class="form-input"
+                                            placeholder="Enter your phone number?"
+                                            required
+                                            pattern="^(0|\+?84)(3|5|7|8|9)[0-9]{8}$"
+                                            value=""
+                                        />
+                                        <p class="form-error">Nhập đúng định dạng số điện thoại</p>
+                                    </div>
+                                </div>
+
+                                <div class="form-row">
+                                    <div class="form-ground">
+                                        <label for="company-name" class="form-label">Company name</label>
+                                        <input
+                                            type="text"
+                                            name="company-name"
+                                            id="company-name"
+                                            class="form-input"
+                                            placeholder="Where do you work?"
+                                            required
+                                            minlength="2"
+                                            value=""
+                                        />
+                                        <p class="form-error">Nhập nội dung tối thiểu 2 ký tự</p>
+                                    </div>
+
+                                    <div class="form-ground">
+                                        <label for="company-size" class="form-label">Company size</label>
+                                        <select class="form-select" name="company-size" id="company-size">
+                                            <option value="" hidden>Select</option>
+                                            <option value="1 - 5 people">1 - 5 people</option>
+                                            <option value="6 - 15 people">6 - 15 people</option>
+                                            <option value="16 - 25 people">16 - 25 people</option>
+                                            <option value="Other">Other</option>
+                                        </select>
+                                        <p class="form-error">Hãy chọn nội dung</p>
+                                    </div>
+                                </div>
+
+                                <div class="form-row">
+                                    <div class="form-ground form-ground__message">
+                                        <label for="message" class="form-label"
+                                            >What are you hoping to learn about?</label
+                                        >
+                                        <textarea
+                                            class="form-message"
+                                            name="message"
+                                            id="message"
+                                            placeholder="Where do you work?"
+                                            required
+                                            minlength="10"
+                                        ></textarea>
+                                        <p class="form-error">Nhập nội dung tối thiểu 10 ký tự</p>
+                                    </div>
+                                </div>
+
+                                <div class="form-row">
+                                    <div class="from-ground form-ground__checkbox">
+                                        <input
+                                            class="form-checkbox"
+                                            type="checkbox"
+                                            name="form-checkbox"
+                                            id="form-checkbox"
+                                            value="I would like to receive emails about future webinars"
+                                            required
+                                        />
+                                        <label for="form-checkbox" class="form-label form-label__checkbox">
+                                            I would like to receive emails about future webinars
+                                        </label>
+                                        <p class="form-error">Check vào ô bên trái</p>
+                                    </div>
+                                </div>
+
+                                <div class="form-row">
+                                    <div class="form-ground">
+                                        <button type="submit" class="form-btn">Register for this event</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <!-- Form Right -->
+                    <div class="form-right">
+                        <div class="form-right__content">
+                            <!-- Social -->
+                            <div class="social-share">
+                                <p class="social-label">Share</p>
+                                <div class="social-list">
+                                    <a href="#!" class="social-item">
+                                        <i class="social-item__icon fa-brands fa-facebook-f"></i>
+                                    </a>
+                                    <a href="#!" class="social-item">
+                                        <i class="social-item__icon fa-brands fa-twitter"></i>
+                                    </a>
+                                    <a href="#!" class="social-item">
+                                        <i class="social-item__icon fa-brands fa-linkedin-in"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <!-- Quest -->
+                            <div class="form-right__quests-list">
+                                <p class="quest__heading">Guests</p>
+
+                                <!-- Quest item 1 -->
+                                <div class="quest-item">
+                                    <a href="#!">
+                                        <img
+                                            src="./assets/img/quest-item-avatar-1.avif"
+                                            alt=""
+                                            class="quest-item__avatar"
+                                        />
+                                    </a>
+                                    <div class="quest-item__info">
+                                        <p><a class="quest-item__name" href="#!">Lisa Alvin</a></p>
+                                        <p class="quest-item__type">Cofounder, Jea</p>
+                                    </div>
+                                </div>
+
+                                <!-- Quest item 2 -->
+                                <div class="quest-item">
+                                    <a href="#!">
+                                        <img
+                                            src="./assets/img/quest-item-avatar-2.avif"
+                                            alt=""
+                                            class="quest-item__avatar"
+                                        />
+                                    </a>
+
+                                    <div class="quest-item__info">
+                                        <p><a class="quest-item__name" href="#!">Jenny Pick</a></p>
+                                        <p class="quest-item__type">Head of Education, Jea</p>
+                                    </div>
+                                </div>
+
+                                <!-- Quest item 3 -->
+                                <div class="quest-item">
+                                    <a href="#!">
+                                        <img
+                                            src="./assets/img/quest-item-avatar-3.avif"
+                                            alt=""
+                                            class="quest-item__avatar"
+                                        />
+                                    </a>
+                                    <div class="quest-item__info">
+                                        <p><a class="quest-item__name" href="#!">Peter Scott</a></p>
+                                        <p class="quest-item__type">Founder, Jea</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Hosted by -->
+                            <div class="form-right__quests-list">
+                                <p class="quest__heading">Hosted by</p>
+
+                                <!-- Hosted by item -->
+                                <div class="quest-item">
+                                    <a href="#!">
+                                        <img
+                                            src="./assets/img/quest-item-avatar-4.avif"
+                                            alt=""
+                                            class="quest-item__avatar"
+                                        />
+                                    </a>
+                                    <div class="quest-item__info">
+                                        <p><a class="quest-item__name" href="#!">Josh Jacob</a></p>
+                                        <p class="quest-item__type">Educator, Web</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer"></footer>
+    </body>
+</html>
